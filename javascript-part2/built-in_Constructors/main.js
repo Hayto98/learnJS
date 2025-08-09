@@ -60,7 +60,7 @@ console.log(typeof funcObj); // function
 //* Sử dụng từ khóa new với các kiểu dữ liệu này tạo ra các đối tượng wrapper tương ứng, cho phép bạn truy cập vào các phương thức và thuộc tính của đối tượng.
 //*  Tuy nhiên, trong nhiều trường hợp, việc sử dụng kiểu dữ liệu primitive (ví dụ: chuỗi literal, số, và giá trị boolean) là đủ và được ưu tiên vì tính đơn giản và hiệu suất tốt hơn.
 // ví dụ
-let str1 = new String("hello");
+let str1 = new String("hello world");
 console.log(str1);
 
 // String {'hello'}0: "h"1: "e"2: "l"3: "l"4: "o"length: 5[[Prototype]]: String[[PrimitiveValue]]: "hello"
@@ -71,3 +71,7 @@ console.log(str1);
 
 // trong đó có 3 cái dùng new trực tiếp String , Object , Number
 // Bigin , Symbol thì phải dùng thông qua Object ()
+
+//?  unbox : lấy giá trị bên trong
+
+console.log(str1.valueOf());
