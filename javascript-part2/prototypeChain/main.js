@@ -32,7 +32,7 @@ console.log(player.__proto__.constructor); //ƒ Character(name) {
 // }
 
 //? ngoài ra chúng ta có thể kiểm tra nó có đc tạo từ object Charactor bằng cách khác
-console.log(player instanceof Character); // true
+console.log(player instanceof Character); // true 
 
 //* chuỗi kế thừa
 
