@@ -46,3 +46,34 @@ console.log(demo7.lastIndexOf("ổi")); //-1
 let demo8 = ["tào", "cam", "thơm", "đào", "lê", "sầu riêng"];
 console.log(demo8.includes("cam")); //true
 console.log(demo8.includes("ổi")); //false
+
+//? chuyển đổi và đảo ngược mảng
+
+//* join() : nối tất cả các phần tử của mảng thành một chuỗi, với một dấu phân cách giữa chúng
+let fruits = ["Apple", "Banana", "Cherry"];
+
+console.log(fruits.join(" / ")); //Apple / Banana / Cherry
+
+// Lưu ý: Nếu mảng có phần tử undefined hoặc null, chúng sẽ được chuyển thành chuỗi rỗng trong chuỗi kết quả.
+
+//* reverse() : đảo ngược thứ tự của một mảng và trả về mảng đã được đảo ngược.
+let numbers = [1, 2, 3];
+
+// Đảo ngược thứ tự các phần tử
+const reversed = numbers.reverse();
+console.log(reversed); //[3, 2, 1]
+
+//* toString() : chuyển đổi mảng thành một chuỗi các giá trị, cách nhau bằng dấu phẩy.
+let fruits2 = ["Apple", "Banana", "Cherry"];
+
+console.log(fruits2.toString()); //Apple,Banana,Cherry
+
+//? lưu ý
+//* khi sừ dụng NaN
+// Sai lầm: indexOf() không thể tìm thấy NaN trong mảng vì NaN không bằng chính nó (NaN === NaN là false).
+// Khắc phục: Sử dụng includes() để xử lý trường hợp có NaN
+
+//? Các sai lầm thường gặp
+// Sử dụng push() và unshift() không đúng cách: Gọi mà không truyền tham số, khiến mảng thay đổi độ dài mà không thêm phần tử mới.
+// Quên rằng push(), pop(), unshift(), shift() và reverse() thay đổi mảng ban đầu: Dẫn đến thay đổi hoặc mất mát dữ liệu không mong muốn.
+// Sử dụng indexOf() trên mảng có chứa NaN: indexOf() không thể tìm thấy NaN vì NaN không bằng chính nó.
